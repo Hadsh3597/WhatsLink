@@ -18,102 +18,160 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            lblLinkGerado = new LinkLabel();
-            label1 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            txtTelefone = new TextBox();
-            btnGerarLink = new Button();
-            tableLayoutPanel1.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            menuToolStripMenuItem = new ToolStripMenuItem();
+            msgProgramadasToolStripMenuItem = new ToolStripMenuItem();
+            msgTempoToolStripMenuItem = new ToolStripMenuItem();
+            ajustesToolStripMenuItem = new ToolStripMenuItem();
+            ajustesMsgTempoToolStripMenuItem = new ToolStripMenuItem();
+            panel1 = new Panel();
+            uC_21 = new UC_2();
+            uC_home1 = new UC_home();
+            uC_Config1 = new UC_Config();
+            uC_11 = new UC_1();
+            resetToolStripMenuItem = new ToolStripMenuItem();
+            resetarConfiguraçõesToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // lblLinkGerado
+            // menuStrip1
             // 
-            lblLinkGerado.AutoSize = true;
-            lblLinkGerado.Location = new Point(58, 150);
-            lblLinkGerado.Margin = new Padding(4, 0, 4, 0);
-            lblLinkGerado.Name = "lblLinkGerado";
-            lblLinkGerado.Size = new Size(0, 15);
-            lblLinkGerado.TabIndex = 3;
-            lblLinkGerado.Visible = false;
-            lblLinkGerado.LinkClicked += lblLinkGerado_LinkClicked;
+            menuStrip1.BackColor = Color.White;
+            menuStrip1.GripMargin = new Padding(0);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, msgProgramadasToolStripMenuItem, msgTempoToolStripMenuItem, ajustesToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(408, 24);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // label1
+            // menuToolStripMenuItem
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(82, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(170, 24);
-            label1.TabIndex = 4;
-            label1.Text = "Insira o número";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            menuToolStripMenuItem.Size = new Size(48, 20);
+            menuToolStripMenuItem.Text = "Inicio";
+            menuToolStripMenuItem.Click += menuToolStripMenuItem_Click;
             // 
-            // tableLayoutPanel1
+            // msgProgramadasToolStripMenuItem
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.None;
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(txtTelefone, 0, 1);
-            tableLayoutPanel1.Controls.Add(btnGerarLink, 0, 2);
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(20);
-            tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel1.Size = new Size(334, 211);
-            tableLayoutPanel1.TabIndex = 5;
+            msgProgramadasToolStripMenuItem.Name = "msgProgramadasToolStripMenuItem";
+            msgProgramadasToolStripMenuItem.Size = new Size(115, 20);
+            msgProgramadasToolStripMenuItem.Text = "msg programadas";
+            msgProgramadasToolStripMenuItem.Click += msgProgramadasToolStripMenuItem_Click;
             // 
-            // txtTelefone
+            // msgTempoToolStripMenuItem
             // 
-            txtTelefone.Anchor = AnchorStyles.None;
-            txtTelefone.Location = new Point(89, 73);
-            txtTelefone.Margin = new Padding(4, 3, 4, 3);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(155, 23);
-            txtTelefone.TabIndex = 1;
+            msgTempoToolStripMenuItem.Name = "msgTempoToolStripMenuItem";
+            msgTempoToolStripMenuItem.Size = new Size(80, 20);
+            msgTempoToolStripMenuItem.Text = "msg tempo";
+            msgTempoToolStripMenuItem.Click += msgTempoToolStripMenuItem_Click;
             // 
-            // btnGerarLink
+            // ajustesToolStripMenuItem
             // 
-            btnGerarLink.Anchor = AnchorStyles.None;
-            btnGerarLink.Location = new Point(108, 103);
-            btnGerarLink.Margin = new Padding(4, 3, 4, 3);
-            btnGerarLink.Name = "btnGerarLink";
-            btnGerarLink.Size = new Size(117, 24);
-            btnGerarLink.TabIndex = 2;
-            btnGerarLink.Text = "Enviar mensagem";
-            btnGerarLink.UseVisualStyleBackColor = true;
-            btnGerarLink.Click += btnGerarLink_Click;
+            ajustesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ajustesMsgTempoToolStripMenuItem, resetToolStripMenuItem });
+            ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
+            ajustesToolStripMenuItem.Size = new Size(55, 20);
+            ajustesToolStripMenuItem.Text = "ajustes";
+            ajustesToolStripMenuItem.Click += ajustesToolStripMenuItem_Click;
+            // 
+            // ajustesMsgTempoToolStripMenuItem
+            // 
+            ajustesMsgTempoToolStripMenuItem.Name = "ajustesMsgTempoToolStripMenuItem";
+            ajustesMsgTempoToolStripMenuItem.Size = new Size(180, 22);
+            ajustesMsgTempoToolStripMenuItem.Text = "ajustes msg tempo";
+            ajustesMsgTempoToolStripMenuItem.Click += ajustesMsgTempoToolStripMenuItem_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(uC_21);
+            panel1.Controls.Add(uC_home1);
+            panel1.Controls.Add(uC_Config1);
+            panel1.Controls.Add(uC_11);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(408, 238);
+            panel1.TabIndex = 2;
+            // 
+            // uC_21
+            // 
+            uC_21.Location = new Point(209, 0);
+            uC_21.Name = "uC_21";
+            uC_21.Size = new Size(96, 238);
+            uC_21.TabIndex = 3;
+            // 
+            // uC_home1
+            // 
+            uC_home1.Location = new Point(119, 0);
+            uC_home1.Name = "uC_home1";
+            uC_home1.Size = new Size(84, 238);
+            uC_home1.TabIndex = 2;
+            // 
+            // uC_Config1
+            // 
+            uC_Config1.Location = new Point(0, 0);
+            uC_Config1.Name = "uC_Config1";
+            uC_Config1.Size = new Size(113, 235);
+            uC_Config1.TabIndex = 1;
+            // 
+            // uC_11
+            // 
+            uC_11.BackColor = SystemColors.ControlDarkDark;
+            uC_11.Location = new Point(311, 0);
+            uC_11.Name = "uC_11";
+            uC_11.Size = new Size(97, 238);
+            uC_11.TabIndex = 0;
+            // 
+            // resetToolStripMenuItem
+            // 
+            resetToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { resetarConfiguraçõesToolStripMenuItem });
+            resetToolStripMenuItem.Name = "resetToolStripMenuItem";
+            resetToolStripMenuItem.Size = new Size(180, 22);
+            resetToolStripMenuItem.Text = "reset";
+            // 
+            // resetarConfiguraçõesToolStripMenuItem
+            // 
+            resetarConfiguraçõesToolStripMenuItem.Name = "resetarConfiguraçõesToolStripMenuItem";
+            resetarConfiguraçõesToolStripMenuItem.Size = new Size(190, 22);
+            resetarConfiguraçõesToolStripMenuItem.Text = "Resetar configurações";
+            resetarConfiguraçõesToolStripMenuItem.Click += resetarConfiguraçõesToolStripMenuItem_Click;
             // 
             // Form1
             // 
-            AcceptButton = btnGerarLink;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 211);
-            Controls.Add(lblLinkGerado);
-            Controls.Add(tableLayoutPanel1);
+            ClientSize = new Size(408, 262);
+            Controls.Add(panel1);
+            Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             MinimumSize = new Size(250, 150);
             Name = "Form1";
             Text = "WhatsLink";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private System.Windows.Forms.LinkLabel lblLinkGerado;
-        private Label label1;
-        private TableLayoutPanel tableLayoutPanel1;
-        private TextBox txtTelefone;
-        private Button btnGerarLink;
+
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuToolStripMenuItem;
+        private Panel panel1;
+        private ToolStripMenuItem msgProgramadasToolStripMenuItem;
+        private UC_home uC_home1;
+        private UC_Config uC_Config1;
+        private UC_1 uC_11;
+        private ToolStripMenuItem msgTempoToolStripMenuItem;
+        private ToolStripMenuItem ajustesToolStripMenuItem;
+        private ToolStripMenuItem ajustesMsgTempoToolStripMenuItem;
+        private UC_2 uC_21;
+        private ToolStripMenuItem resetToolStripMenuItem;
+        private ToolStripMenuItem resetarConfiguraçõesToolStripMenuItem;
     }
 }

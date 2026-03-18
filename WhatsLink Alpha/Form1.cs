@@ -10,60 +10,111 @@ namespace WhatsLink_Alpha
         public Form1()
         {
             InitializeComponent();
+            AbrirNoPainel<UC_home>();
+            ConfigurarEstiloMenu();
         }
 
-        private void btnGerarLink_Click(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            string texto = txtTelefone.Text;
-            string apenasNumeros = new string(texto.Where(char.IsDigit).ToArray());
+        }
 
-            if (apenasNumeros.Length >= 10)
+        private void AbrirNoPainel<T>() where T : UserControl, new()
+        {
+            if (panel1.Controls.Count > 0)
+                panel1.Controls.Clear();
+
+            T uc = new T();
+            uc.Dock = DockStyle.Fill;
+
+            panel1.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void ConfigurarEstiloMenu()
+        {
+            if (this.menuStrip1 != null)
             {
-                if (!apenasNumeros.StartsWith("55"))
-                    apenasNumeros = "55" + apenasNumeros;
-
-                string urlApp = $"whatsapp://send?phone={apenasNumeros}";
-                string urlWeb = $"https://wa.me/{apenasNumeros}";
-
-                try
+                foreach (ToolStripMenuItem item in menuStrip1.Items)
                 {
-                    // Abre o WhatsApp Desktop direto
-                    Process.Start(new ProcessStartInfo(urlApp) { UseShellExecute = true });
+                    if (item.DropDown is ToolStripDropDownMenu menuDropdown)
+                    {
+                        menuDropdown.ShowCheckMargin = false;
+                        menuDropdown.ShowImageMargin = false;
+                    }
                 }
-                catch
+            }
+        }
+
+        private void UC_home_Load(object sender, EventArgs e)
+        {
+            foreach (ToolStripMenuItem item in menuStrip1.Items)
+            {
+                if (item.DropDown is ToolStripDropDownMenu menuDropdown)
                 {
-                    // Se não tiver o app, abre no navegador
-                    Process.Start(new ProcessStartInfo(urlWeb) { UseShellExecute = true });
+                    menuDropdown.ShowCheckMargin = false;
+                    menuDropdown.ShowImageMargin = false;
                 }
-
-                lblLinkGerado.Text = urlWeb;
-
-                // Limpa e foca para o próximo uso
-                txtTelefone.Clear();
-                txtTelefone.Focus();
-            }
-            else
-            {
-                MessageBox.Show("Digite o número com DDD.");
             }
         }
 
-        // ESSA É A FUNÇÃO QUE O DESIGNER ESTÁ PEDINDO PARA O ERRO SUMIR
-        private void lblLinkGerado_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(lblLinkGerado.Text))
-            {
-                Process.Start(new ProcessStartInfo(lblLinkGerado.Text) { UseShellExecute = true });
-            }
+            ((ToolStripDropDownMenu)menuToolStripMenuItem.DropDown).ShowCheckMargin = false;
+            ((ToolStripDropDownMenu)menuToolStripMenuItem.DropDown).ShowImageMargin = false;
         }
 
-        private void txtTelefone_KeyDown(object sender, KeyEventArgs e)
+        private void configuraÃ§ÃµesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnGerarLink_Click(sender, e);
-                e.SuppressKeyPress = true;
-            }
+            AbrirNoPainel<UC_Config>();
+            AbrirConfiguracoes();
+        }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirNoPainel<UC_home>();
+            AbrirHome();
+        }
+
+        private void msgProgramadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirNoPainel<UC_1>();
+            this.Size = new Size(424, 301);
+        }
+
+        public void AbrirConfiguracoes()
+        {
+            this.Size = new Size(700, 600);
+        }
+
+        public void AbrirHome()
+        {
+            this.Size = new Size(424, 301);
+        }
+
+        private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirNoPainel<UC_Config>();
+            AbrirConfiguracoes();
+
+        }
+
+        private void ajustesMsgTempoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirNoPainel<ajustes2>();
+            AbrirConfiguracoes();
+        }
+
+        private void msgTempoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirNoPainel<UC_2>();
+            AbrirHome();
+        }
+
+        private void resetarConfiguraÃ§ÃµesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reset();
+            Properties.Settings.Default.Save();
+            MessageBox.Show("MemÃ³ria limpa! Agora salve novamente.");
         }
     }
 }

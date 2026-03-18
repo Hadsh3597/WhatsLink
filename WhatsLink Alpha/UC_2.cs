@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WhatsLink_Alpha
+{
+    public partial class UC_2 : UserControl
+    {
+        public UC_2()
+        {
+            InitializeComponent();
+        }
+
+        private void btnGerarLink_Click(object sender, EventArgs e)
+        {
+            AbrirMensagemSoNumero();
+        }
+
+        public void AbrirMensagemSoNumero()
+        {
+            if (NumMin.Text.All(char.IsDigit))
+                {
+                AbrirNoAppComMensagem(Properties.Settings.Default.txtTempo1 + " " + NumMin.Text + " " + Properties.Settings.Default.txtTempo2);
+            }
+            else
+            {
+                MessageBox.Show("igite apenas numeros");
+            }
+        }
+            public void AbrirNoAppComMensagem(string mensagem)
+        {
+            string texto = txtTelefone.Text;
+            string apenasNumeros = new string(texto.Where(char.IsDigit).ToArray());
+
+            if (apenasNumeros.Length >= 10)
+            {
+                if (!apenasNumeros.StartsWith("55"))
+                    apenasNumeros = "55" + apenasNumeros;
+
+                string mensagemFormatada = Uri.EscapeDataString(mensagem);
+                string urlApp = $"whatsapp://send?phone={apenasNumeros}&text={mensagemFormatada}";
+
+                try
+                {
+                    Process.Start(new ProcessStartInfo(urlApp) { UseShellExecute = true });
+
+                    txtTelefone.Clear();
+                    txtTelefone.Focus();
+                    Thread.Sleep(1000);
+                    SendKeys.SendWait("{ENTER}");
+                }
+                catch (Exception)
+                {
+                    string urlWeb = $"https://wa.me/{apenasNumeros}?text={mensagemFormatada}";
+                    Process.Start(new ProcessStartInfo(urlWeb) { UseShellExecute = true });
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o número com DDD primeiro.");
+            }
+        }
+    
+    }
+}
