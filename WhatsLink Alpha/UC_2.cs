@@ -26,10 +26,11 @@ namespace WhatsLink_Alpha
             if (NumMin.Text.All(char.IsDigit))
                 {
                 AbrirNoAppComMensagem(Properties.Settings.Default.txtTempo1 + " " + NumMin.Text + " " + Properties.Settings.Default.txtTempo2);
+                txtTelefone.Focus();
             }
             else
             {
-                MessageBox.Show("igite apenas numeros");
+                MessageBox.Show("digite apenas numeros");
             }
         }
             public void AbrirNoAppComMensagem(string mensagem)
