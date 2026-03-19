@@ -36,10 +36,10 @@
             btnMsg4 = new Button();
             btnMsg3 = new Button();
             label1 = new Label();
-            txtTelefone = new TextBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             btnMsg2 = new Button();
             btnMsg1 = new Button();
+            txtTelefone = new MaskedTextBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -85,17 +85,18 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 3);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(txtTelefone, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 2);
+            tableLayoutPanel1.Controls.Add(txtTelefone, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(424, 301);
             tableLayoutPanel1.TabIndex = 0;
             // 
@@ -107,19 +108,19 @@
             tableLayoutPanel3.Controls.Add(btnMsg4, 1, 0);
             tableLayoutPanel3.Controls.Add(btnMsg3, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 221);
+            tableLayoutPanel3.Location = new Point(3, 207);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(418, 77);
+            tableLayoutPanel3.Size = new Size(418, 69);
             tableLayoutPanel3.TabIndex = 6;
             // 
             // btnMsg4
             // 
             btnMsg4.Anchor = AnchorStyles.None;
             btnMsg4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMsg4.Location = new Point(241, 23);
+            btnMsg4.Location = new Point(241, 19);
             btnMsg4.Margin = new Padding(4, 3, 4, 3);
             btnMsg4.Name = "btnMsg4";
             btnMsg4.Size = new Size(144, 31);
@@ -132,7 +133,7 @@
             // 
             btnMsg3.Anchor = AnchorStyles.None;
             btnMsg3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMsg3.Location = new Point(32, 23);
+            btnMsg3.Location = new Point(32, 19);
             btnMsg3.Margin = new Padding(4, 3, 4, 3);
             btnMsg3.Name = "btnMsg3";
             btnMsg3.Size = new Size(144, 31);
@@ -153,15 +154,6 @@
             label1.Text = "Insira o número";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtTelefone
-            // 
-            txtTelefone.Anchor = AnchorStyles.None;
-            txtTelefone.Location = new Point(130, 83);
-            txtTelefone.Margin = new Padding(4, 3, 4, 3);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(163, 23);
-            txtTelefone.TabIndex = 2;
-            // 
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.ColumnCount = 2;
@@ -170,19 +162,19 @@
             tableLayoutPanel2.Controls.Add(btnMsg2, 1, 0);
             tableLayoutPanel2.Controls.Add(btnMsg1, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 139);
+            tableLayoutPanel2.Location = new Point(3, 132);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(418, 76);
+            tableLayoutPanel2.Size = new Size(418, 69);
             tableLayoutPanel2.TabIndex = 3;
             // 
             // btnMsg2
             // 
             btnMsg2.Anchor = AnchorStyles.None;
             btnMsg2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMsg2.Location = new Point(241, 22);
+            btnMsg2.Location = new Point(241, 19);
             btnMsg2.Margin = new Padding(4, 3, 4, 3);
             btnMsg2.Name = "btnMsg2";
             btnMsg2.Size = new Size(144, 31);
@@ -195,7 +187,7 @@
             // 
             btnMsg1.Anchor = AnchorStyles.None;
             btnMsg1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMsg1.Location = new Point(32, 22);
+            btnMsg1.Location = new Point(32, 19);
             btnMsg1.Margin = new Padding(4, 3, 4, 3);
             btnMsg1.Name = "btnMsg1";
             btnMsg1.Size = new Size(144, 31);
@@ -203,6 +195,16 @@
             btnMsg1.Text = "sem mensagem salva";
             btnMsg1.UseVisualStyleBackColor = true;
             btnMsg1.Click += btnMsg1_Click;
+            // 
+            // txtTelefone
+            // 
+            txtTelefone.Anchor = AnchorStyles.None;
+            txtTelefone.Location = new Point(162, 80);
+            txtTelefone.Mask = "(99) 00000-0000";
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(100, 23);
+            txtTelefone.TabIndex = 7;
+            txtTelefone.TextAlign = HorizontalAlignment.Center;
             // 
             // UC_1
             // 
@@ -231,11 +233,11 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private Button btnMsg1;
-        private TextBox txtTelefone;
         private TableLayoutPanel tableLayoutPanel3;
         private Button btnMsg4;
         private Button btnMsg3;
         private TableLayoutPanel tableLayoutPanel2;
         private Button btnMsg2;
+        private MaskedTextBox txtTelefone;
     }
 }

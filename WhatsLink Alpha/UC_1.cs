@@ -84,6 +84,7 @@ namespace WhatsLink_Alpha
         private void UC_1_Load(object sender, EventArgs e)
         {
             AtualizarBotoes();
+            txtTelefone.Focus();
         }
 
         private void btnMsg1_Click(object sender, EventArgs e)

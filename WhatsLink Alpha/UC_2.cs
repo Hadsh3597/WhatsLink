@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 
@@ -24,7 +25,7 @@ namespace WhatsLink_Alpha
         public void AbrirMensagemSoNumero()
         {
             if (NumMin.Text.All(char.IsDigit))
-                {
+            {
                 AbrirNoAppComMensagem(Properties.Settings.Default.txtTempo1 + " " + NumMin.Text + " " + Properties.Settings.Default.txtTempo2);
                 txtTelefone.Focus();
             }
@@ -33,7 +34,7 @@ namespace WhatsLink_Alpha
                 MessageBox.Show("digite apenas numeros");
             }
         }
-            public void AbrirNoAppComMensagem(string mensagem)
+        public void AbrirNoAppComMensagem(string mensagem)
         {
             string texto = txtTelefone.Text;
             string apenasNumeros = new string(texto.Where(char.IsDigit).ToArray());
@@ -66,6 +67,27 @@ namespace WhatsLink_Alpha
                 MessageBox.Show("Digite o número com DDD primeiro.");
             }
         }
-    
+
+        public void OnEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                NumMin.Focus();
+            }
+        }
+
+        private void UC_2_Load(object sender, EventArgs e)
+        {
+            txtTelefone.Focus();
+        }
+
+        private void OnEnterEnviar(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AbrirMensagemSoNumero();
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

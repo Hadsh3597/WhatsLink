@@ -24,13 +24,13 @@
             msgTempoToolStripMenuItem = new ToolStripMenuItem();
             ajustesToolStripMenuItem = new ToolStripMenuItem();
             ajustesMsgTempoToolStripMenuItem = new ToolStripMenuItem();
+            resetToolStripMenuItem = new ToolStripMenuItem();
+            resetarConfiguraçõesToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             uC_21 = new UC_2();
             uC_home1 = new UC_home();
             uC_Config1 = new UC_Config();
             uC_11 = new UC_1();
-            resetToolStripMenuItem = new ToolStripMenuItem();
-            resetarConfiguraçõesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -78,9 +78,23 @@
             // ajustesMsgTempoToolStripMenuItem
             // 
             ajustesMsgTempoToolStripMenuItem.Name = "ajustesMsgTempoToolStripMenuItem";
-            ajustesMsgTempoToolStripMenuItem.Size = new Size(180, 22);
+            ajustesMsgTempoToolStripMenuItem.Size = new Size(174, 22);
             ajustesMsgTempoToolStripMenuItem.Text = "ajustes msg tempo";
             ajustesMsgTempoToolStripMenuItem.Click += ajustesMsgTempoToolStripMenuItem_Click;
+            // 
+            // resetToolStripMenuItem
+            // 
+            resetToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { resetarConfiguraçõesToolStripMenuItem });
+            resetToolStripMenuItem.Name = "resetToolStripMenuItem";
+            resetToolStripMenuItem.Size = new Size(174, 22);
+            resetToolStripMenuItem.Text = "reset";
+            // 
+            // resetarConfiguraçõesToolStripMenuItem
+            // 
+            resetarConfiguraçõesToolStripMenuItem.Name = "resetarConfiguraçõesToolStripMenuItem";
+            resetarConfiguraçõesToolStripMenuItem.Size = new Size(190, 22);
+            resetarConfiguraçõesToolStripMenuItem.Text = "Resetar configurações";
+            resetarConfiguraçõesToolStripMenuItem.Click += resetarConfiguraçõesToolStripMenuItem_Click;
             // 
             // panel1
             // 
@@ -123,20 +137,6 @@
             uC_11.Size = new Size(97, 238);
             uC_11.TabIndex = 0;
             // 
-            // resetToolStripMenuItem
-            // 
-            resetToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { resetarConfiguraçõesToolStripMenuItem });
-            resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            resetToolStripMenuItem.Size = new Size(180, 22);
-            resetToolStripMenuItem.Text = "reset";
-            // 
-            // resetarConfiguraçõesToolStripMenuItem
-            // 
-            resetarConfiguraçõesToolStripMenuItem.Name = "resetarConfiguraçõesToolStripMenuItem";
-            resetarConfiguraçõesToolStripMenuItem.Size = new Size(190, 22);
-            resetarConfiguraçõesToolStripMenuItem.Text = "Resetar configurações";
-            resetarConfiguraçõesToolStripMenuItem.Click += resetarConfiguraçõesToolStripMenuItem_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -150,6 +150,7 @@
             MaximizeBox = false;
             MinimumSize = new Size(250, 150);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "WhatsLink";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

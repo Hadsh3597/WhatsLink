@@ -19,6 +19,7 @@ namespace WhatsLink_Alpha
         {
             txtTempoA.Text = Properties.Settings.Default.txtTempo1;
             txtTempoB.Text = Properties.Settings.Default.txtTempo2;
+            ExampleLabel.Text = Properties.Settings.Default.txtTempo1 + " 15 " + Properties.Settings.Default.txtTempo2;
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -27,6 +28,8 @@ namespace WhatsLink_Alpha
             Properties.Settings.Default.txtTempo2 = txtTempoB.Text;
 
             Properties.Settings.Default.Save();
+
+            UC_ajustes_Load(sender, e);
 
             MessageBox.Show("Todas as configurações foram salvas com sucesso!");
         }

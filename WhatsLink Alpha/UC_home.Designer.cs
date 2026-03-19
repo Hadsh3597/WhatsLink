@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             btnGerarLink = new Button();
-            txtTelefone = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            txtTelefone = new MaskedTextBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,16 +60,6 @@
             btnGerarLink.UseVisualStyleBackColor = true;
             btnGerarLink.Click += btnGerarLink_Click;
             // 
-            // txtTelefone
-            // 
-            txtTelefone.Anchor = AnchorStyles.None;
-            txtTelefone.Location = new Point(130, 79);
-            txtTelefone.Margin = new Padding(4, 3, 4, 3);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(163, 23);
-            txtTelefone.TabIndex = 2;
-            txtTelefone.KeyDown += txtTelefone_KeyDown;
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 1;
@@ -90,6 +80,16 @@
             tableLayoutPanel1.Size = new Size(424, 301);
             tableLayoutPanel1.TabIndex = 8;
             // 
+            // txtTelefone
+            // 
+            txtTelefone.Anchor = AnchorStyles.None;
+            txtTelefone.Location = new Point(162, 79);
+            txtTelefone.Mask = "(99) 00000-0000";
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(100, 23);
+            txtTelefone.TabIndex = 8;
+            txtTelefone.TextAlign = HorizontalAlignment.Center;
+            // 
             // UC_home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -97,6 +97,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "UC_home";
             Size = new Size(424, 301);
+            Load += UC_home_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -105,7 +106,7 @@
         #endregion
         private Label label1;
         private Button btnGerarLink;
-        private TextBox txtTelefone;
         private TableLayoutPanel tableLayoutPanel1;
+        private MaskedTextBox txtTelefone;
     }
 }

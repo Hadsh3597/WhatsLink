@@ -25,7 +25,7 @@ namespace WhatsLink_Alpha
             }
         }
 
-        
+
 
         private void btnGerarLink_Click(object sender, EventArgs e)
         {
@@ -67,6 +67,11 @@ namespace WhatsLink_Alpha
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UC_home_Load(object sender, EventArgs e)
+        {
+            txtTelefone.Focus ();
         }
     }
 }

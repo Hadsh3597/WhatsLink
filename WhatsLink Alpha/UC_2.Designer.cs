@@ -31,9 +31,9 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             label3 = new Label();
-            txtTelefone = new TextBox();
             btnGerarLink = new Button();
             NumMin = new TextBox();
+            txtTelefone = new MaskedTextBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,9 +43,9 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label3, 0, 3);
-            tableLayoutPanel1.Controls.Add(txtTelefone, 0, 1);
             tableLayoutPanel1.Controls.Add(btnGerarLink, 0, 4);
             tableLayoutPanel1.Controls.Add(NumMin, 0, 2);
+            tableLayoutPanel1.Controls.Add(txtTelefone, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
@@ -83,24 +83,14 @@
             label3.TabIndex = 3;
             label3.Text = "minutos para a entrega";
             // 
-            // txtTelefone
-            // 
-            txtTelefone.Anchor = AnchorStyles.None;
-            txtTelefone.Location = new Point(130, 63);
-            txtTelefone.Margin = new Padding(4, 3, 4, 3);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(163, 23);
-            txtTelefone.TabIndex = 1;
-            txtTelefone.TextAlign = HorizontalAlignment.Center;
-            // 
             // btnGerarLink
             // 
             btnGerarLink.Anchor = AnchorStyles.None;
             btnGerarLink.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGerarLink.Location = new Point(140, 182);
+            btnGerarLink.Location = new Point(140, 183);
             btnGerarLink.Margin = new Padding(4, 3, 4, 3);
             btnGerarLink.Name = "btnGerarLink";
-            btnGerarLink.Size = new Size(144, 31);
+            btnGerarLink.Size = new Size(144, 28);
             btnGerarLink.TabIndex = 4;
             btnGerarLink.Text = "Enviar mensagem";
             btnGerarLink.UseVisualStyleBackColor = true;
@@ -115,6 +105,18 @@
             NumMin.Size = new Size(63, 23);
             NumMin.TabIndex = 2;
             NumMin.TextAlign = HorizontalAlignment.Center;
+            NumMin.KeyDown += OnEnterEnviar;
+            // 
+            // txtTelefone
+            // 
+            txtTelefone.Anchor = AnchorStyles.None;
+            txtTelefone.Location = new Point(162, 63);
+            txtTelefone.Mask = "(99) 00000-0000";
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(100, 23);
+            txtTelefone.TabIndex = 5;
+            txtTelefone.TextAlign = HorizontalAlignment.Center;
+            txtTelefone.KeyDown += OnEnter;
             // 
             // UC_2
             // 
@@ -123,6 +125,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "UC_2";
             Size = new Size(424, 301);
+            Load += UC_2_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -132,9 +135,9 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private TextBox txtTelefone;
         private Button btnGerarLink;
         private TextBox NumMin;
         private Label label3;
+        private MaskedTextBox txtTelefone;
     }
 }
