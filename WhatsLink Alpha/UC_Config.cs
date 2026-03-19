@@ -25,6 +25,8 @@ namespace WhatsLink_Alpha
             txtPrevia2.Text = Properties.Settings.Default.btn2;
             txtPrevia3.Text = Properties.Settings.Default.btn3;
             txtPrevia4.Text = Properties.Settings.Default.btn4;
+
+            EnterCheck.Checked = Properties.Settings.Default.EnviarAuto;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +40,8 @@ namespace WhatsLink_Alpha
             Properties.Settings.Default.btn2 = txtPrevia2.Text;
             Properties.Settings.Default.btn3 = txtPrevia3.Text;
             Properties.Settings.Default.btn4 = txtPrevia4.Text;
+
+            Properties.Settings.Default.EnviarAuto = EnterCheck.Checked;
 
             Properties.Settings.Default.Save();
 

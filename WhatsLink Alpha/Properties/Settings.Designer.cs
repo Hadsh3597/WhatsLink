@@ -190,5 +190,17 @@ namespace WhatsLink_Alpha.Properties {
                 this["txtTempo2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EnviarAuto {
+            get {
+                return ((bool)(this["EnviarAuto"]));
+            }
+            set {
+                this["EnviarAuto"] = value;
+            }
+        }
     }
 }

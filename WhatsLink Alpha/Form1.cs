@@ -83,7 +83,7 @@ namespace WhatsLink_Alpha
 
         public void AbrirConfiguracoes()
         {
-            this.Size = new Size(700, 600);
+            this.Size = new Size(700, 700);
         }
 
         public void AbrirHome()
@@ -95,6 +95,8 @@ namespace WhatsLink_Alpha
         {
             AbrirNoPainel<UC_Config>();
             AbrirConfiguracoes();
+            int larguraTela = Screen.PrimaryScreen.WorkingArea.Width;
+            this.Location = new Point((larguraTela - this.Width) / 2, 0);
 
         }
 
@@ -102,6 +104,8 @@ namespace WhatsLink_Alpha
         {
             AbrirNoPainel<ajustes2>();
             AbrirConfiguracoes();
+            int larguraTela = Screen.PrimaryScreen.WorkingArea.Width;
+            this.Location = new Point((larguraTela - this.Width) / 2, 0);
         }
 
         private void msgTempoToolStripMenuItem_Click(object sender, EventArgs e)

@@ -57,6 +57,7 @@
             label3 = new Label();
             label1 = new Label();
             buttonSalvar = new Button();
+            EnterCheck = new CheckBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
@@ -104,6 +105,7 @@
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonSalvar, 0, 9);
+            tableLayoutPanel1.Controls.Add(EnterCheck, 0, 10);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
@@ -452,6 +454,18 @@
             buttonSalvar.UseVisualStyleBackColor = true;
             buttonSalvar.Click += button1_Click;
             // 
+            // EnterCheck
+            // 
+            EnterCheck.Anchor = AnchorStyles.None;
+            EnterCheck.AutoSize = true;
+            EnterCheck.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EnterCheck.Location = new Point(284, 577);
+            EnterCheck.Name = "EnterCheck";
+            EnterCheck.Size = new Size(274, 24);
+            EnterCheck.TabIndex = 17;
+            EnterCheck.Text = "Enviar mensagens automaticamente";
+            EnterCheck.UseVisualStyleBackColor = true;
+            // 
             // UC_Config
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -514,5 +528,6 @@
         private TableLayoutPanel tableLayoutPanel4;
         private TextBox txtPrevia2;
         private TextBox txtMsg2;
+        private CheckBox EnterCheck;
     }
 }

@@ -50,8 +50,12 @@ namespace WhatsLink_Alpha
 
                     txtTelefone.Clear();
                     txtTelefone.Focus();
-                    Thread.Sleep(1000);
-                    SendKeys.SendWait("{ENTER}");
+                    
+                    if(Properties.Settings.Default.EnviarAuto)
+                    {
+                        Thread.Sleep(1000);
+                        SendKeys.SendWait("{ENTER}");
+                    }
                 }
                 catch (Exception)
                 {

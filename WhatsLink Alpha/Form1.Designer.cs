@@ -33,10 +33,10 @@
             uC_Config1 = new UC_Config();
             uC_11 = new UC_1();
             statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             lblStatus = new ToolStripStatusLabel();
             timerStatus = new System.Windows.Forms.Timer(components);
+            ajustes21 = new ajustes2();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -105,6 +105,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(ajustes21);
             panel1.Controls.Add(uC_21);
             panel1.Controls.Add(uC_home1);
             panel1.Controls.Add(uC_Config1);
@@ -133,7 +134,7 @@
             // 
             uC_Config1.Location = new Point(0, 0);
             uC_Config1.Name = "uC_Config1";
-            uC_Config1.Size = new Size(113, 235);
+            uC_Config1.Size = new Size(113, 92);
             uC_Config1.TabIndex = 1;
             // 
             // uC_11
@@ -148,7 +149,7 @@
             // 
             statusStrip1.BackColor = Color.White;
             statusStrip1.ImeMode = ImeMode.NoControl;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, lblStatus });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel2, lblStatus });
             statusStrip1.Location = new Point(0, 240);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(408, 22);
@@ -156,17 +157,10 @@
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(40, 17);
-            toolStripStatusLabel1.Text = "ByGris";
-            toolStripStatusLabel1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // toolStripStatusLabel2
             // 
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(322, 17);
+            toolStripStatusLabel2.Size = new Size(362, 17);
             toolStripStatusLabel2.Spring = true;
             // 
             // lblStatus
@@ -179,6 +173,13 @@
             // 
             timerStatus.Interval = 2000;
             timerStatus.Tick += timerStatus_Tick;
+            // 
+            // ajustes21
+            // 
+            ajustes21.Location = new Point(0, 89);
+            ajustes21.Name = "ajustes21";
+            ajustes21.Size = new Size(113, 37);
+            ajustes21.TabIndex = 4;
             // 
             // Form1
             // 
@@ -221,9 +222,9 @@
         private ToolStripMenuItem resetToolStripMenuItem;
         private ToolStripMenuItem resetarConfiguraçõesToolStripMenuItem;
         private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;
         private ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.Timer timerStatus;
+        private ajustes2 ajustes21;
     }
 }
