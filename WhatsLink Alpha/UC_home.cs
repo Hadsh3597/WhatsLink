@@ -73,5 +73,15 @@ namespace WhatsLink_Alpha
         {
             txtTelefone.Focus ();
         }
+
+        private void UC_1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                txtTelefone.BeginInvoke((Action)delegate {
+                    txtTelefone.Focus();
+                });
+            }
+        }
     }
 }

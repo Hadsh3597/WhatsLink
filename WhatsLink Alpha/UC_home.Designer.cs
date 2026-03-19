@@ -89,6 +89,7 @@
             txtTelefone.Size = new Size(100, 23);
             txtTelefone.TabIndex = 8;
             txtTelefone.TextAlign = HorizontalAlignment.Center;
+            txtTelefone.KeyDown += txtTelefone_KeyDown;
             // 
             // UC_home
             // 
@@ -98,6 +99,7 @@
             Name = "UC_home";
             Size = new Size(424, 301);
             Load += UC_home_Load;
+            Enter += UC_1_VisibleChanged;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

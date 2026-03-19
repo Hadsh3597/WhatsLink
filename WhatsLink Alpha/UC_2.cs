@@ -24,7 +24,7 @@ namespace WhatsLink_Alpha
 
         public void AbrirMensagemSoNumero()
         {
-            if (NumMin.Text.All(char.IsDigit))
+            if (!string.IsNullOrWhiteSpace(NumMin.Text) && NumMin.Text.All(char.IsDigit))
             {
                 AbrirNoAppComMensagem(Properties.Settings.Default.txtTempo1 + " " + NumMin.Text + " " + Properties.Settings.Default.txtTempo2);
                 txtTelefone.Focus();
