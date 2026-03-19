@@ -142,17 +142,21 @@
             // 
             // statusStrip1
             // 
+            statusStrip1.BackColor = Color.White;
+            statusStrip1.ImeMode = ImeMode.NoControl;
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 240);
+            statusStrip1.LayoutStyle = ToolStripLayoutStyle.Flow;
+            statusStrip1.Location = new Point(0, 242);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(408, 22);
+            statusStrip1.Size = new Size(408, 20);
+            statusStrip1.SizingGrip = false;
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(40, 17);
+            toolStripStatusLabel1.Size = new Size(40, 15);
             toolStripStatusLabel1.Text = "ByGris";
             // 
             // Form1
