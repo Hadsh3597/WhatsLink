@@ -31,8 +31,11 @@
             uC_home1 = new UC_home();
             uC_Config1 = new UC_Config();
             uC_11 = new UC_1();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -112,7 +115,7 @@
             // 
             uC_21.Location = new Point(209, 0);
             uC_21.Name = "uC_21";
-            uC_21.Size = new Size(96, 238);
+            uC_21.Size = new Size(96, 92);
             uC_21.TabIndex = 3;
             // 
             // uC_home1
@@ -137,11 +140,27 @@
             uC_11.Size = new Size(97, 238);
             uC_11.TabIndex = 0;
             // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 240);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(408, 22);
+            statusStrip1.TabIndex = 3;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(40, 17);
+            toolStripStatusLabel1.Text = "ByGris";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(408, 262);
+            Controls.Add(statusStrip1);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -155,6 +174,8 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -174,5 +195,7 @@
         private UC_2 uC_21;
         private ToolStripMenuItem resetToolStripMenuItem;
         private ToolStripMenuItem resetarConfiguraçõesToolStripMenuItem;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
