@@ -55,6 +55,7 @@ namespace WhatsLink_Alpha
             else
             {
                 MessageBox.Show("Digite o número com DDD.");
+                txtTelefone.Focus();
             }
 
         }

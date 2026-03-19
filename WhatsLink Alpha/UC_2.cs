@@ -86,6 +86,7 @@ namespace WhatsLink_Alpha
             if (e.KeyCode == Keys.Enter)
             {
                 AbrirMensagemSoNumero();
+                txtTelefone.Focus();
                 e.SuppressKeyPress = true;
             }
         }

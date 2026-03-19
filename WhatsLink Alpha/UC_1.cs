@@ -62,6 +62,7 @@ namespace WhatsLink_Alpha
             else
             {
                 MessageBox.Show("Digite o número com DDD primeiro.");
+                txtTelefone.Focus();
             }
         }
 
@@ -90,21 +91,25 @@ namespace WhatsLink_Alpha
         private void btnMsg1_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem1);
+            txtTelefone.Focus();
         }
 
         private void btnMsg2_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem2);
+            txtTelefone.Focus();
         }
 
         private void btnMsg3_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem3);
+            txtTelefone.Focus();
         }
 
         private void btnMsg4_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem4);
+            txtTelefone.Focus();
         }
     }
 }
