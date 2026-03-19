@@ -116,5 +116,21 @@ namespace WhatsLink_Alpha
             Properties.Settings.Default.Save();
             MessageBox.Show("Memória limpa! Agora salve novamente.");
         }
+
+        public void AtualizarMensagemStatus(string texto, Color cor)
+        {
+            lblStatus.Text = texto;
+            lblStatus.ForeColor = cor;
+
+            timerStatus.Stop();
+            timerStatus.Start();
+        }
+
+        private void timerStatus_Tick(object sender, EventArgs e)
+        {
+            lblStatus.Text = "";
+            timerStatus.Stop();
+        
+        }
     }
 }

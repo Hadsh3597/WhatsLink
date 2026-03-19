@@ -17,6 +17,7 @@
 
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
@@ -33,6 +34,9 @@
             uC_11 = new UC_1();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            toolStripStatusLabel2 = new ToolStripStatusLabel();
+            lblStatus = new ToolStripStatusLabel();
+            timerStatus = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -122,7 +126,7 @@
             // 
             uC_home1.Location = new Point(119, 0);
             uC_home1.Name = "uC_home1";
-            uC_home1.Size = new Size(84, 238);
+            uC_home1.Size = new Size(84, 126);
             uC_home1.TabIndex = 2;
             // 
             // uC_Config1
@@ -144,11 +148,10 @@
             // 
             statusStrip1.BackColor = Color.White;
             statusStrip1.ImeMode = ImeMode.NoControl;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.LayoutStyle = ToolStripLayoutStyle.Flow;
-            statusStrip1.Location = new Point(0, 242);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, lblStatus });
+            statusStrip1.Location = new Point(0, 240);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(408, 20);
+            statusStrip1.Size = new Size(408, 22);
             statusStrip1.SizingGrip = false;
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
@@ -156,8 +159,26 @@
             // toolStripStatusLabel1
             // 
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(40, 15);
+            toolStripStatusLabel1.Size = new Size(40, 17);
             toolStripStatusLabel1.Text = "ByGris";
+            toolStripStatusLabel1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel2
+            // 
+            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            toolStripStatusLabel2.Size = new Size(322, 17);
+            toolStripStatusLabel2.Spring = true;
+            // 
+            // lblStatus
+            // 
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(0, 17);
+            lblStatus.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // timerStatus
+            // 
+            timerStatus.Interval = 2000;
+            timerStatus.Tick += timerStatus_Tick;
             // 
             // Form1
             // 
@@ -201,5 +222,8 @@
         private ToolStripMenuItem resetarConfiguraçõesToolStripMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel toolStripStatusLabel2;
+        private ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.Timer timerStatus;
     }
 }

@@ -31,7 +31,11 @@ namespace WhatsLink_Alpha
 
             UC_ajustes_Load(sender, e);
 
-            MessageBox.Show("Todas as configurações foram salvas com sucesso!");
+            var formPrincipal = this.ParentForm as Form1;
+            if (formPrincipal != null)
+            {
+                formPrincipal.AtualizarMensagemStatus("✅ Configurações salvas!", Color.DarkGreen);
+            }
         }
 
 

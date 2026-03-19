@@ -41,7 +41,12 @@ namespace WhatsLink_Alpha
 
             Properties.Settings.Default.Save();
 
-            MessageBox.Show("Todas as configurações foram salvas com sucesso!");
+            var formPrincipal = this.ParentForm as Form1;
+            if (formPrincipal != null)
+            {
+                formPrincipal.AtualizarMensagemStatus("✅ Configurações salvas!", Color.DarkGreen);
+            }
+
         }
     }
 }
