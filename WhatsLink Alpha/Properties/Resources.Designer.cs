@@ -59,5 +59,15 @@ namespace WhatsLink_Alpha.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap recreated_windows_7_icons_and_ui_on_svg_v0_q6wbd41ktaqg1_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("recreated-windows-7-icons-and-ui-on-svg-v0-q6wbd41ktaqg1-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
