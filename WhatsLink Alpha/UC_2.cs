@@ -31,7 +31,12 @@ namespace WhatsLink_Alpha
             }
             else
             {
-                MessageBox.Show("digite apenas numeros");
+                using (FormErro aviso = new FormErro())
+                {
+                    aviso.ShowDialog();
+                }
+                txtTelefone.Focus();
+                //MessageBox.Show("digite apenas numeros");
             }
         }
         public void AbrirNoAppComMensagem(string mensagem)
@@ -68,7 +73,12 @@ namespace WhatsLink_Alpha
             }
             else
             {
-                MessageBox.Show("Digite o número com DDD primeiro.");
+                using (FormErro aviso = new FormErro())
+                {
+                    aviso.ShowDialog();
+                }
+                txtTelefone.Focus();
+                //MessageBox.Show("Digite o número com DDD primeiro.");
             }
         }
 

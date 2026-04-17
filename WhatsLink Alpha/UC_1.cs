@@ -65,7 +65,12 @@ namespace WhatsLink_Alpha
             }
             else
             {
-                MessageBox.Show("Digite o número com DDD primeiro.");
+                using (FormErro aviso = new FormErro())
+                {
+                    aviso.ShowDialog();
+                }
+
+                //MessageBox.Show("Digite o número com DDD primeiro.");
                 txtTelefone.Focus();
             }
         }

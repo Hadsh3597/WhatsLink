@@ -28,6 +28,7 @@
             resetToolStripMenuItem = new ToolStripMenuItem();
             resetarConfiguraçõesToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            ajustes21 = new ajustes2();
             uC_21 = new UC_2();
             uC_home1 = new UC_home();
             uC_Config1 = new UC_Config();
@@ -36,7 +37,6 @@
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             lblStatus = new ToolStripStatusLabel();
             timerStatus = new System.Windows.Forms.Timer(components);
-            ajustes21 = new ajustes2();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -116,6 +116,13 @@
             panel1.Size = new Size(408, 238);
             panel1.TabIndex = 2;
             // 
+            // ajustes21
+            // 
+            ajustes21.Location = new Point(0, 89);
+            ajustes21.Name = "ajustes21";
+            ajustes21.Size = new Size(113, 37);
+            ajustes21.TabIndex = 4;
+            // 
             // uC_21
             // 
             uC_21.Location = new Point(209, 0);
@@ -160,7 +167,7 @@
             // toolStripStatusLabel2
             // 
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(362, 17);
+            toolStripStatusLabel2.Size = new Size(393, 17);
             toolStripStatusLabel2.Spring = true;
             // 
             // lblStatus
@@ -173,13 +180,6 @@
             // 
             timerStatus.Interval = 2000;
             timerStatus.Tick += timerStatus_Tick;
-            // 
-            // ajustes21
-            // 
-            ajustes21.Location = new Point(0, 89);
-            ajustes21.Name = "ajustes21";
-            ajustes21.Size = new Size(113, 37);
-            ajustes21.TabIndex = 4;
             // 
             // Form1
             // 
@@ -195,8 +195,9 @@
             MaximizeBox = false;
             MinimumSize = new Size(250, 150);
             Name = "Form1";
+            RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "WhatsLink";
+            Text = "Whatopen";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
