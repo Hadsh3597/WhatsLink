@@ -119,6 +119,7 @@
             // btnMsg4
             // 
             btnMsg4.Anchor = AnchorStyles.None;
+            btnMsg4.Cursor = Cursors.Hand;
             btnMsg4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMsg4.Location = new Point(241, 19);
             btnMsg4.Margin = new Padding(4, 3, 4, 3);
@@ -132,6 +133,7 @@
             // btnMsg3
             // 
             btnMsg3.Anchor = AnchorStyles.None;
+            btnMsg3.Cursor = Cursors.Hand;
             btnMsg3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMsg3.Location = new Point(32, 19);
             btnMsg3.Margin = new Padding(4, 3, 4, 3);
@@ -173,6 +175,7 @@
             // btnMsg2
             // 
             btnMsg2.Anchor = AnchorStyles.None;
+            btnMsg2.Cursor = Cursors.Hand;
             btnMsg2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMsg2.Location = new Point(241, 19);
             btnMsg2.Margin = new Padding(4, 3, 4, 3);
@@ -186,6 +189,7 @@
             // btnMsg1
             // 
             btnMsg1.Anchor = AnchorStyles.None;
+            btnMsg1.Cursor = Cursors.Hand;
             btnMsg1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMsg1.Location = new Point(32, 19);
             btnMsg1.Margin = new Padding(4, 3, 4, 3);

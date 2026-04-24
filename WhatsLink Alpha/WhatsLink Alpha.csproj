@@ -12,14 +12,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="LOGO-CURTO.ico" />
+    <None Remove="LOGO-CURTO.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\LOGO CURTO.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <Content Include="LOGO-CURTO.ico" />
   </ItemGroup>
 
   <ItemGroup>

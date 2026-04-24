@@ -145,6 +145,7 @@
             // 
             txtMsg4.Anchor = AnchorStyles.None;
             txtMsg4.BorderStyle = BorderStyle.FixedSingle;
+            txtMsg4.Cursor = Cursors.IBeam;
             txtMsg4.Location = new Point(432, 3);
             txtMsg4.Multiline = true;
             txtMsg4.Name = "txtMsg4";
@@ -156,6 +157,7 @@
             // 
             txtPrevia4.Anchor = AnchorStyles.None;
             txtPrevia4.BorderStyle = BorderStyle.FixedSingle;
+            txtPrevia4.Cursor = Cursors.IBeam;
             txtPrevia4.Location = new Point(24, 3);
             txtPrevia4.Multiline = true;
             txtPrevia4.Name = "txtPrevia4";
@@ -183,6 +185,7 @@
             // 
             txtMsg3.Anchor = AnchorStyles.None;
             txtMsg3.BorderStyle = BorderStyle.FixedSingle;
+            txtMsg3.Cursor = Cursors.IBeam;
             txtMsg3.Location = new Point(432, 3);
             txtMsg3.Multiline = true;
             txtMsg3.Name = "txtMsg3";
@@ -194,6 +197,7 @@
             // 
             txtPrevia3.Anchor = AnchorStyles.None;
             txtPrevia3.BorderStyle = BorderStyle.FixedSingle;
+            txtPrevia3.Cursor = Cursors.IBeam;
             txtPrevia3.Location = new Point(24, 3);
             txtPrevia3.Multiline = true;
             txtPrevia3.Name = "txtPrevia3";
@@ -221,6 +225,7 @@
             // 
             txtPrevia2.Anchor = AnchorStyles.None;
             txtPrevia2.BorderStyle = BorderStyle.FixedSingle;
+            txtPrevia2.Cursor = Cursors.IBeam;
             txtPrevia2.Location = new Point(24, 3);
             txtPrevia2.Multiline = true;
             txtPrevia2.Name = "txtPrevia2";
@@ -232,6 +237,7 @@
             // 
             txtMsg2.Anchor = AnchorStyles.None;
             txtMsg2.BorderStyle = BorderStyle.FixedSingle;
+            txtMsg2.Cursor = Cursors.IBeam;
             txtMsg2.Location = new Point(432, 3);
             txtMsg2.Multiline = true;
             txtMsg2.Name = "txtMsg2";
@@ -259,6 +265,7 @@
             // 
             txtMsg1.Anchor = AnchorStyles.None;
             txtMsg1.BorderStyle = BorderStyle.FixedSingle;
+            txtMsg1.Cursor = Cursors.IBeam;
             txtMsg1.Location = new Point(432, 3);
             txtMsg1.Multiline = true;
             txtMsg1.Name = "txtMsg1";
@@ -271,6 +278,7 @@
             txtPrevia1.Anchor = AnchorStyles.None;
             txtPrevia1.BackColor = SystemColors.Window;
             txtPrevia1.BorderStyle = BorderStyle.FixedSingle;
+            txtPrevia1.Cursor = Cursors.IBeam;
             txtPrevia1.Location = new Point(24, 3);
             txtPrevia1.Multiline = true;
             txtPrevia1.Name = "txtPrevia1";
@@ -445,6 +453,7 @@
             // buttonSalvar
             // 
             buttonSalvar.Anchor = AnchorStyles.None;
+            buttonSalvar.Cursor = Cursors.Hand;
             buttonSalvar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSalvar.Location = new Point(339, 498);
             buttonSalvar.Name = "buttonSalvar";
@@ -458,6 +467,7 @@
             // 
             EnterCheck.Anchor = AnchorStyles.None;
             EnterCheck.AutoSize = true;
+            EnterCheck.Cursor = Cursors.Hand;
             EnterCheck.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EnterCheck.Location = new Point(284, 577);
             EnterCheck.Name = "EnterCheck";

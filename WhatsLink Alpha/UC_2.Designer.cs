@@ -86,11 +86,12 @@
             // btnGerarLink
             // 
             btnGerarLink.Anchor = AnchorStyles.None;
+            btnGerarLink.Cursor = Cursors.Hand;
             btnGerarLink.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGerarLink.Location = new Point(140, 183);
+            btnGerarLink.Location = new Point(140, 181);
             btnGerarLink.Margin = new Padding(4, 3, 4, 3);
             btnGerarLink.Name = "btnGerarLink";
-            btnGerarLink.Size = new Size(144, 28);
+            btnGerarLink.Size = new Size(144, 32);
             btnGerarLink.TabIndex = 4;
             btnGerarLink.Text = "Enviar mensagem";
             btnGerarLink.UseVisualStyleBackColor = true;

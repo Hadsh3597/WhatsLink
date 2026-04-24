@@ -49,6 +49,7 @@
             // buttonSalvar
             // 
             buttonSalvar.Anchor = AnchorStyles.None;
+            buttonSalvar.Cursor = Cursors.Hand;
             buttonSalvar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSalvar.Location = new Point(339, 498);
             buttonSalvar.Name = "buttonSalvar";
@@ -100,6 +101,7 @@
             // 
             txtTempoB.Anchor = AnchorStyles.None;
             txtTempoB.BorderStyle = BorderStyle.FixedSingle;
+            txtTempoB.Cursor = Cursors.IBeam;
             txtTempoB.Location = new Point(432, 3);
             txtTempoB.Multiline = true;
             txtTempoB.Name = "txtTempoB";
@@ -112,6 +114,7 @@
             txtTempoA.Anchor = AnchorStyles.None;
             txtTempoA.BackColor = SystemColors.Window;
             txtTempoA.BorderStyle = BorderStyle.FixedSingle;
+            txtTempoA.Cursor = Cursors.IBeam;
             txtTempoA.Location = new Point(24, 3);
             txtTempoA.Multiline = true;
             txtTempoA.Name = "txtTempoA";

@@ -50,6 +50,7 @@
             // btnGerarLink
             // 
             btnGerarLink.Anchor = AnchorStyles.None;
+            btnGerarLink.Cursor = Cursors.Hand;
             btnGerarLink.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGerarLink.Location = new Point(140, 148);
             btnGerarLink.Margin = new Padding(4, 3, 4, 3);
