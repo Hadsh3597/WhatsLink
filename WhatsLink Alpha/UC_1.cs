@@ -59,12 +59,18 @@ namespace WhatsLink_Alpha
                     {
                         Thread.Sleep(1000);
                         SendKeys.SendWait("{ENTER}");
+
+                        FocarCampo();
+                        txtTelefone.Focus();
                     }
                 }
                 catch (Exception)
                 {
                     string urlWeb = $"https://wa.me/{apenasNumeros}?text={mensagemFormatada}";
                     Process.Start(new ProcessStartInfo(urlWeb) { UseShellExecute = true });
+
+                    FocarCampo();
+                    txtTelefone.Focus();
                 }
             }
             else
@@ -74,12 +80,8 @@ namespace WhatsLink_Alpha
                     aviso.ShowDialog();
                 }
 
-                //MessageBox.Show("Digite o número com DDD primeiro.");
+                FocarCampo();
                 txtTelefone.Focus();
-                this.BeginInvoke((MethodInvoker)delegate {
-                    txtTelefone.SelectionStart = 0;
-                    txtTelefone.SelectionLength = 0;
-                });
             }
         }
 
@@ -102,50 +104,41 @@ namespace WhatsLink_Alpha
         private void UC_1_Load(object sender, EventArgs e)
         {
             AtualizarBotoes();
+            FocarCampo();
             txtTelefone.Focus();
-            this.BeginInvoke((MethodInvoker)delegate {
-                txtTelefone.SelectionStart = 0;
-                txtTelefone.SelectionLength = 0;
-            });
         }
 
         private void btnMsg1_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem1);
-            txtTelefone.Focus();
-            this.BeginInvoke((MethodInvoker)delegate {
-                txtTelefone.SelectionStart = 0;
-                txtTelefone.SelectionLength = 0;
-            });
         }
 
         private void btnMsg2_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem2);
-            txtTelefone.Focus();
-            this.BeginInvoke((MethodInvoker)delegate {
-                txtTelefone.SelectionStart = 0;
-                txtTelefone.SelectionLength = 0;
-            });
         }
 
         private void btnMsg3_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem3);
-            txtTelefone.Focus();
-            this.BeginInvoke((MethodInvoker)delegate {
-                txtTelefone.SelectionStart = 0;
-                txtTelefone.SelectionLength = 0;
-            });
         }
 
         private void btnMsg4_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem4);
+
+
+        }
+
+        private void FocarCampo()
+        {
             txtTelefone.Focus();
-            this.BeginInvoke((MethodInvoker)delegate {
+            this.BeginInvoke((MethodInvoker)delegate
+            {
                 txtTelefone.SelectionStart = 0;
                 txtTelefone.SelectionLength = 0;
+                SendKeys.Send("{RIGHT}");
+                SendKeys.Send("{BACKSPACE}");
             });
         }
     }
