@@ -2,8 +2,9 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
+using WhatsLink_Alpha;
 
-namespace Whatopen
+namespace WhatsLink_Alpha
 {
     public partial class Form1 : Form
     {

@@ -9,6 +9,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>LOGO CURTO.png</PackageIcon>
     <ApplicationIcon>LOGO-CURTO.ico</ApplicationIcon>
+    <AssemblyTitle></AssemblyTitle>
   </PropertyGroup>
 
   <ItemGroup>
