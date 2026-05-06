@@ -3,12 +3,13 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
-    <RootNamespace>WhatsLink_Alpha</RootNamespace>
+    <RootNamespace>Whatopen</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>LOGO CURTO.png</PackageIcon>
     <ApplicationIcon>LOGO-CURTO.ico</ApplicationIcon>
+    <AssemblyTitle>Whatopen</AssemblyTitle>
   </PropertyGroup>
 
   <ItemGroup>

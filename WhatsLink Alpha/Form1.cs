@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WhatsLink_Alpha
+namespace Whatopen
 {
     public partial class Form1 : Form
     {

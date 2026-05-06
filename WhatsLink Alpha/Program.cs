@@ -1,4 +1,4 @@
-namespace WhatsLink_Alpha
+namespace Whatopen
 {
     internal static class Program
     {

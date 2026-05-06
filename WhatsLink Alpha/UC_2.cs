@@ -8,7 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WhatsLink_Alpha
+namespace Whatopen
 {
     public partial class UC_2 : UserControl
     {

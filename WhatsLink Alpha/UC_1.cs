@@ -9,7 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WhatsLink_Alpha
+namespace Whatopen
 {
     public partial class UC_1 : UserControl
     {
@@ -77,10 +77,10 @@ namespace WhatsLink_Alpha
 
         public void AtualizarBotoes()
         {
-            string n1 = global::WhatsLink_Alpha.Properties.Settings.Default.btn1;
-            string n2 = global::WhatsLink_Alpha.Properties.Settings.Default.btn2;
-            string n3 = global::WhatsLink_Alpha.Properties.Settings.Default.btn3;
-            string n4 = global::WhatsLink_Alpha.Properties.Settings.Default.btn4;
+            string n1 = global::Whatopen.Properties.Settings.Default.btn1;
+            string n2 = global::Whatopen.Properties.Settings.Default.btn2;
+            string n3 = global::Whatopen.Properties.Settings.Default.btn3;
+            string n4 = global::Whatopen.Properties.Settings.Default.btn4;
 
             btnMsg1.Text = string.IsNullOrWhiteSpace(n1) ? "sem mensagem salva" : n1;
             btnMsg2.Text = string.IsNullOrWhiteSpace(n2) ? "sem mensagem salva" : n2;

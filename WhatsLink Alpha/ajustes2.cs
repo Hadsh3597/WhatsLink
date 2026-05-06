@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WhatsLink_Alpha
+namespace Whatopen
 {
     public partial class ajustes2 : UserControl
     {
