@@ -7,7 +7,7 @@ using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Whatopen
+namespace WhatsLink_Alpha
 {
     public partial class FormErro : Form
     {

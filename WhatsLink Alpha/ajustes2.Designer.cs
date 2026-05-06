@@ -1,4 +1,4 @@
-﻿namespace Whatopen
+﻿namespace WhatsLink_Alpha
 {
     partial class ajustes2
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonSalvar = new Button();
             label2 = new Label();
             label3 = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -39,25 +38,13 @@
             linkLabel1 = new LinkLabel();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+            buttonSalvar = new Button();
             ExampleLabel = new Label();
             label5 = new Label();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // buttonSalvar
-            // 
-            buttonSalvar.Anchor = AnchorStyles.None;
-            buttonSalvar.Cursor = Cursors.Hand;
-            buttonSalvar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonSalvar.Location = new Point(339, 498);
-            buttonSalvar.Name = "buttonSalvar";
-            buttonSalvar.Size = new Size(164, 36);
-            buttonSalvar.TabIndex = 2;
-            buttonSalvar.Text = "Salvar ";
-            buttonSalvar.UseVisualStyleBackColor = true;
-            buttonSalvar.Click += buttonSalvar_Click;
             // 
             // label2
             // 
@@ -163,24 +150,24 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(180, 21);
+            label1.Location = new Point(191, 21);
             label1.Name = "label1";
-            label1.Size = new Size(482, 32);
+            label1.Size = new Size(459, 32);
             label1.TabIndex = 1;
-            label1.Text = "Configurar mensagens automaticas";
+            label1.Text = "Configurar mensagem com tempo";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = SystemColors.Control;
+            tableLayoutPanel1.BackColor = Color.FromArgb(250, 250, 250);
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(buttonSalvar, 0, 9);
             tableLayoutPanel1.Controls.Add(ExampleLabel, 0, 4);
             tableLayoutPanel1.Controls.Add(label5, 0, 3);
+            tableLayoutPanel1.Controls.Add(buttonSalvar, 0, 6);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
@@ -199,6 +186,19 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.4782639F));
             tableLayoutPanel1.Size = new Size(842, 621);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // buttonSalvar
+            // 
+            buttonSalvar.Anchor = AnchorStyles.None;
+            buttonSalvar.Cursor = Cursors.Hand;
+            buttonSalvar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSalvar.Location = new Point(339, 322);
+            buttonSalvar.Name = "buttonSalvar";
+            buttonSalvar.Size = new Size(164, 36);
+            buttonSalvar.TabIndex = 2;
+            buttonSalvar.Text = "Salvar ";
+            buttonSalvar.UseVisualStyleBackColor = true;
+            buttonSalvar.Click += buttonSalvar_Click;
             // 
             // ExampleLabel
             // 
@@ -246,8 +246,6 @@
         }
 
         #endregion
-
-        private Button buttonSalvar;
         private Label label2;
         private Label label3;
         private TableLayoutPanel tableLayoutPanel3;
@@ -260,5 +258,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label ExampleLabel;
         private Label label5;
+        private Button buttonSalvar;
     }
 }

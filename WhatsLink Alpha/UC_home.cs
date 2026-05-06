@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Whatopen
+namespace WhatsLink_Alpha
 {
     public partial class UC_home : UserControl
     {
@@ -20,7 +20,7 @@ namespace Whatopen
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnGerarLink_Click(sender, e);
+                guna2Button1_Click(sender, e);
                 e.SuppressKeyPress = true;
             }
         }
@@ -29,6 +29,31 @@ namespace Whatopen
 
         private void btnGerarLink_Click(object sender, EventArgs e)
         {
+        }
+
+        private void PerguntasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UC_home_Load(object sender, EventArgs e)
+        {
+            FocarCampo();
+        }
+
+        private void UC_1_VisibleChanged(object sender, EventArgs e)
+        {
+            FocarCampo();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
             string texto = txtTelefone.Text;
             string apenasNumeros = new string(texto.Where(char.IsDigit).ToArray());
 
@@ -49,6 +74,7 @@ namespace Whatopen
                     Process.Start(new ProcessStartInfo(urlWeb) { UseShellExecute = true });
                 }
 
+                FocarCampo();
                 txtTelefone.Clear();
                 txtTelefone.Focus();
             }
@@ -56,36 +82,26 @@ namespace Whatopen
             {
                 using (FormErro aviso = new FormErro())
                 {
+                    FocarCampo();
+                    txtTelefone.Clear();
                     aviso.ShowDialog();
                 }
-                txtTelefone.Focus();
             }
 
         }
 
-        private void PerguntasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FocarCampo()
         {
-
-        }
-
-        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UC_home_Load(object sender, EventArgs e)
-        {
-            txtTelefone.Focus ();
-        }
-
-        private void UC_1_VisibleChanged(object sender, EventArgs e)
-        {
-            if (this.Visible)
+            txtTelefone.Focus();
+            this.BeginInvoke((MethodInvoker)delegate
             {
-                txtTelefone.BeginInvoke((Action)delegate {
-                    txtTelefone.Focus();
-                });
-            }
+                txtTelefone.Focus();
+                txtTelefone.SelectionStart = 0;
+                txtTelefone.SelectionLength = 0;
+                SendKeys.Send("{RIGHT}");
+                SendKeys.Send("{BACKSPACE}");
+            });
         }
+
     }
 }

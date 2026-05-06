@@ -1,4 +1,4 @@
-﻿namespace Whatopen
+﻿namespace WhatsLink_Alpha
 {
     partial class FormErro
     {

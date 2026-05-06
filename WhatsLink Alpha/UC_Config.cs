@@ -6,14 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Whatopen
+namespace WhatsLink_Alpha
 {
     public partial class UC_Config : UserControl
     {
+        public static UC_Config instance { get; private set; }
+
         public UC_Config()
         {
             InitializeComponent();
+            instance = this;
         }
+
         private void UC_config_Load(object sender, EventArgs e)
         {
             txtMsg1.Text = Properties.Settings.Default.Mensagem1;
@@ -29,7 +33,7 @@ namespace Whatopen
             EnterCheck.Checked = Properties.Settings.Default.EnviarAuto;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void saveconfig()
         {
             Properties.Settings.Default.Mensagem1 = txtMsg1.Text;
             Properties.Settings.Default.Mensagem2 = txtMsg2.Text;
@@ -45,12 +49,8 @@ namespace Whatopen
 
             Properties.Settings.Default.Save();
 
-            var formPrincipal = this.ParentForm as Form1;
-            if (formPrincipal != null)
-            {
-                formPrincipal.AtualizarMensagemStatus("✅ Configurações salvas!", Color.DarkGreen);
-            }
+
 
         }
-    }
+    }   
 }

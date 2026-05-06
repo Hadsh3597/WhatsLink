@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Whatopen
+namespace WhatsLink_Alpha
 {
     public partial class ajustes2 : UserControl
     {
@@ -31,13 +31,10 @@ namespace Whatopen
 
             UC_ajustes_Load(sender, e);
 
-            var formPrincipal = this.ParentForm as Form1;
-            if (formPrincipal != null)
-            {
-                formPrincipal.AtualizarMensagemStatus("✅ Configurações salvas!", Color.DarkGreen);
-            }
+            var formPrincipal = this.ParentForm as Whatopen;
+
+            UC_Config.instance?.saveconfig();
+
         }
-
-
     }
 }

@@ -9,7 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Whatopen
+namespace WhatsLink_Alpha
 {
     public partial class UC_1 : UserControl
     {
@@ -50,8 +50,12 @@ namespace Whatopen
 
                     txtTelefone.Clear();
                     txtTelefone.Focus();
-                    
-                    if(Properties.Settings.Default.EnviarAuto)
+                    this.BeginInvoke((MethodInvoker)delegate {
+                        txtTelefone.SelectionStart = 0;
+                        txtTelefone.SelectionLength = 0;
+                    });
+
+                    if (Properties.Settings.Default.EnviarAuto)
                     {
                         Thread.Sleep(1000);
                         SendKeys.SendWait("{ENTER}");
@@ -72,15 +76,19 @@ namespace Whatopen
 
                 //MessageBox.Show("Digite o número com DDD primeiro.");
                 txtTelefone.Focus();
+                this.BeginInvoke((MethodInvoker)delegate {
+                    txtTelefone.SelectionStart = 0;
+                    txtTelefone.SelectionLength = 0;
+                });
             }
         }
 
         public void AtualizarBotoes()
         {
-            string n1 = global::Whatopen.Properties.Settings.Default.btn1;
-            string n2 = global::Whatopen.Properties.Settings.Default.btn2;
-            string n3 = global::Whatopen.Properties.Settings.Default.btn3;
-            string n4 = global::Whatopen.Properties.Settings.Default.btn4;
+            string n1 = global::WhatsLink_Alpha.Properties.Settings.Default.btn1;
+            string n2 = global::WhatsLink_Alpha.Properties.Settings.Default.btn2;
+            string n3 = global::WhatsLink_Alpha.Properties.Settings.Default.btn3;
+            string n4 = global::WhatsLink_Alpha.Properties.Settings.Default.btn4;
 
             btnMsg1.Text = string.IsNullOrWhiteSpace(n1) ? "sem mensagem salva" : n1;
             btnMsg2.Text = string.IsNullOrWhiteSpace(n2) ? "sem mensagem salva" : n2;
@@ -95,30 +103,50 @@ namespace Whatopen
         {
             AtualizarBotoes();
             txtTelefone.Focus();
+            this.BeginInvoke((MethodInvoker)delegate {
+                txtTelefone.SelectionStart = 0;
+                txtTelefone.SelectionLength = 0;
+            });
         }
 
         private void btnMsg1_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem1);
             txtTelefone.Focus();
+            this.BeginInvoke((MethodInvoker)delegate {
+                txtTelefone.SelectionStart = 0;
+                txtTelefone.SelectionLength = 0;
+            });
         }
 
         private void btnMsg2_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem2);
             txtTelefone.Focus();
+            this.BeginInvoke((MethodInvoker)delegate {
+                txtTelefone.SelectionStart = 0;
+                txtTelefone.SelectionLength = 0;
+            });
         }
 
         private void btnMsg3_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem3);
             txtTelefone.Focus();
+            this.BeginInvoke((MethodInvoker)delegate {
+                txtTelefone.SelectionStart = 0;
+                txtTelefone.SelectionLength = 0;
+            });
         }
 
         private void btnMsg4_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem4);
             txtTelefone.Focus();
+            this.BeginInvoke((MethodInvoker)delegate {
+                txtTelefone.SelectionStart = 0;
+                txtTelefone.SelectionLength = 0;
+            });
         }
     }
 }
