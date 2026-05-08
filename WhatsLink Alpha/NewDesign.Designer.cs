@@ -241,7 +241,9 @@
             ClientSize = new Size(433, 279);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Whatopen";
             Text = "Whatopen";
             Activated += Form1_Activated;

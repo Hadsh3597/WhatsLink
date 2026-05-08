@@ -84,7 +84,7 @@ namespace WhatsLink_Alpha
 
         public void AbrirConfiguracoes()
         {
-            this.Size = new Size(700, 700);
+            this.Size = new Size(704, 974);
         }
 
         public void AbrirHome()

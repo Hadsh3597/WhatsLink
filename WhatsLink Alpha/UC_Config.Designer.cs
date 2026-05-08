@@ -107,6 +107,7 @@
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
             tableLayoutPanel1.Controls.Add(EnterCheck, 0, 9);
             tableLayoutPanel1.Controls.Add(guna2Separator1, 0, 10);
+            tableLayoutPanel1.Dock = DockStyle.Top;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -123,7 +124,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 56.52174F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.4782639F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(700, 618);
+            tableLayoutPanel1.Size = new Size(709, 590);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -139,7 +140,7 @@
             tableLayoutPanel8.RowCount = 1;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel8.Size = new Size(694, 64);
+            tableLayoutPanel8.Size = new Size(703, 64);
             tableLayoutPanel8.TabIndex = 16;
             // 
             // txtMsg4
@@ -147,7 +148,7 @@
             txtMsg4.Anchor = AnchorStyles.None;
             txtMsg4.BorderStyle = BorderStyle.FixedSingle;
             txtMsg4.Cursor = Cursors.IBeam;
-            txtMsg4.Location = new Point(387, 3);
+            txtMsg4.Location = new Point(394, 3);
             txtMsg4.Multiline = true;
             txtMsg4.Name = "txtMsg4";
             txtMsg4.ScrollBars = ScrollBars.Vertical;
@@ -159,7 +160,7 @@
             txtPrevia4.Anchor = AnchorStyles.None;
             txtPrevia4.BorderStyle = BorderStyle.FixedSingle;
             txtPrevia4.Cursor = Cursors.IBeam;
-            txtPrevia4.Location = new Point(40, 3);
+            txtPrevia4.Location = new Point(42, 3);
             txtPrevia4.Multiline = true;
             txtPrevia4.Name = "txtPrevia4";
             txtPrevia4.Size = new Size(266, 58);
@@ -171,7 +172,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(109, 21);
+            label1.Location = new Point(113, 21);
             label1.Name = "label1";
             label1.Size = new Size(482, 32);
             label1.TabIndex = 0;
@@ -191,7 +192,7 @@
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel6.Size = new Size(694, 64);
+            tableLayoutPanel6.Size = new Size(703, 64);
             tableLayoutPanel6.TabIndex = 15;
             // 
             // txtMsg3
@@ -199,7 +200,7 @@
             txtMsg3.Anchor = AnchorStyles.None;
             txtMsg3.BorderStyle = BorderStyle.FixedSingle;
             txtMsg3.Cursor = Cursors.IBeam;
-            txtMsg3.Location = new Point(387, 3);
+            txtMsg3.Location = new Point(394, 3);
             txtMsg3.Multiline = true;
             txtMsg3.Name = "txtMsg3";
             txtMsg3.ScrollBars = ScrollBars.Vertical;
@@ -211,7 +212,7 @@
             txtPrevia3.Anchor = AnchorStyles.None;
             txtPrevia3.BorderStyle = BorderStyle.FixedSingle;
             txtPrevia3.Cursor = Cursors.IBeam;
-            txtPrevia3.Location = new Point(40, 3);
+            txtPrevia3.Location = new Point(42, 3);
             txtPrevia3.Multiline = true;
             txtPrevia3.Name = "txtPrevia3";
             txtPrevia3.Size = new Size(266, 58);
@@ -231,7 +232,7 @@
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.Size = new Size(694, 64);
+            tableLayoutPanel4.Size = new Size(703, 64);
             tableLayoutPanel4.TabIndex = 14;
             // 
             // txtPrevia2
@@ -239,7 +240,7 @@
             txtPrevia2.Anchor = AnchorStyles.None;
             txtPrevia2.BorderStyle = BorderStyle.FixedSingle;
             txtPrevia2.Cursor = Cursors.IBeam;
-            txtPrevia2.Location = new Point(40, 3);
+            txtPrevia2.Location = new Point(42, 3);
             txtPrevia2.Multiline = true;
             txtPrevia2.Name = "txtPrevia2";
             txtPrevia2.Size = new Size(266, 58);
@@ -251,7 +252,7 @@
             txtMsg2.Anchor = AnchorStyles.None;
             txtMsg2.BorderStyle = BorderStyle.FixedSingle;
             txtMsg2.Cursor = Cursors.IBeam;
-            txtMsg2.Location = new Point(387, 3);
+            txtMsg2.Location = new Point(394, 3);
             txtMsg2.Multiline = true;
             txtMsg2.Name = "txtMsg2";
             txtMsg2.ScrollBars = ScrollBars.Vertical;
@@ -271,7 +272,7 @@
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(694, 64);
+            tableLayoutPanel2.Size = new Size(703, 64);
             tableLayoutPanel2.TabIndex = 13;
             // 
             // txtPrevia1
@@ -280,7 +281,7 @@
             txtPrevia1.BackColor = SystemColors.Window;
             txtPrevia1.BorderStyle = BorderStyle.FixedSingle;
             txtPrevia1.Cursor = Cursors.IBeam;
-            txtPrevia1.Location = new Point(40, 6);
+            txtPrevia1.Location = new Point(42, 6);
             txtPrevia1.Multiline = true;
             txtPrevia1.Name = "txtPrevia1";
             txtPrevia1.Size = new Size(266, 52);
@@ -292,7 +293,7 @@
             txtMsg1.Anchor = AnchorStyles.None;
             txtMsg1.BorderStyle = BorderStyle.FixedSingle;
             txtMsg1.Cursor = Cursors.IBeam;
-            txtMsg1.Location = new Point(387, 3);
+            txtMsg1.Location = new Point(394, 3);
             txtMsg1.Multiline = true;
             txtMsg1.Name = "txtMsg1";
             txtMsg1.ScrollBars = ScrollBars.Vertical;
@@ -312,7 +313,7 @@
             tableLayoutPanel9.RowCount = 1;
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel9.Size = new Size(694, 24);
+            tableLayoutPanel9.Size = new Size(703, 24);
             tableLayoutPanel9.TabIndex = 12;
             // 
             // label9
@@ -320,7 +321,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(492, 2);
+            label9.Location = new Point(498, 2);
             label9.Name = "label9";
             label9.Size = new Size(57, 20);
             label9.TabIndex = 1;
@@ -331,7 +332,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(124, 2);
+            label8.Location = new Point(126, 2);
             label8.Name = "label8";
             label8.Size = new Size(99, 20);
             label8.TabIndex = 2;
@@ -350,7 +351,7 @@
             tableLayoutPanel7.RowCount = 1;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.Size = new Size(694, 24);
+            tableLayoutPanel7.Size = new Size(703, 24);
             tableLayoutPanel7.TabIndex = 10;
             // 
             // label7
@@ -358,7 +359,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(492, 2);
+            label7.Location = new Point(498, 2);
             label7.Name = "label7";
             label7.Size = new Size(57, 20);
             label7.TabIndex = 1;
@@ -369,7 +370,7 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(124, 2);
+            label6.Location = new Point(126, 2);
             label6.Name = "label6";
             label6.Size = new Size(99, 20);
             label6.TabIndex = 2;
@@ -388,7 +389,7 @@
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Size = new Size(694, 24);
+            tableLayoutPanel5.Size = new Size(703, 24);
             tableLayoutPanel5.TabIndex = 7;
             // 
             // label4
@@ -396,7 +397,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(492, 2);
+            label4.Location = new Point(498, 2);
             label4.Name = "label4";
             label4.Size = new Size(57, 20);
             label4.TabIndex = 1;
@@ -407,7 +408,7 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(124, 2);
+            label5.Location = new Point(126, 2);
             label5.Name = "label5";
             label5.Size = new Size(99, 20);
             label5.TabIndex = 2;
@@ -426,7 +427,7 @@
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(694, 24);
+            tableLayoutPanel3.Size = new Size(703, 24);
             tableLayoutPanel3.TabIndex = 5;
             // 
             // label3
@@ -434,7 +435,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(124, 2);
+            label3.Location = new Point(126, 2);
             label3.Name = "label3";
             label3.Size = new Size(99, 20);
             label3.TabIndex = 3;
@@ -445,7 +446,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(492, 2);
+            label2.Location = new Point(498, 2);
             label2.Name = "label2";
             label2.Size = new Size(57, 20);
             label2.TabIndex = 2;
@@ -457,7 +458,7 @@
             EnterCheck.AutoSize = true;
             EnterCheck.Cursor = Cursors.Hand;
             EnterCheck.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EnterCheck.Location = new Point(213, 503);
+            EnterCheck.Location = new Point(217, 495);
             EnterCheck.Name = "EnterCheck";
             EnterCheck.Size = new Size(274, 24);
             EnterCheck.TabIndex = 17;
@@ -468,16 +469,17 @@
             // 
             guna2Separator1.Anchor = AnchorStyles.None;
             guna2Separator1.FillColor = Color.Black;
-            guna2Separator1.Location = new Point(3, 581);
+            guna2Separator1.Location = new Point(7, 560);
             guna2Separator1.Name = "guna2Separator1";
             guna2Separator1.Size = new Size(694, 10);
             guna2Separator1.TabIndex = 18;
             // 
             // ajustes21
             // 
-            ajustes21.Location = new Point(0, 621);
+            ajustes21.Dock = DockStyle.Bottom;
+            ajustes21.Location = new Point(0, 590);
             ajustes21.Name = "ajustes21";
-            ajustes21.Size = new Size(683, 390);
+            ajustes21.Size = new Size(709, 390);
             ajustes21.TabIndex = 15;
             // 
             // UC_Config
@@ -490,7 +492,7 @@
             Controls.Add(linkLabel1);
             Controls.Add(tableLayoutPanel1);
             Name = "UC_Config";
-            Size = new Size(666, 974);
+            Size = new Size(709, 974);
             Load += UC_config_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

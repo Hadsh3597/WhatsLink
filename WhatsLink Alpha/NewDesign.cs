@@ -51,7 +51,7 @@ namespace WhatsLink_Alpha
         {
             panel2.Controls.Clear();
             panel2.Controls.Add(new UC_Config() { Dock = DockStyle.Fill });
-            this.Size = new Size(700, 700);
+            this.Size = new Size(709, 974);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

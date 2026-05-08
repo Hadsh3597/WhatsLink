@@ -111,7 +111,7 @@ namespace WhatsLink_Alpha
         private async void btnMsg1_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem1);
-            await Task.Delay(500);
+            await Task.Delay(1000);
             this.FindForm().Activate();
             txtTelefone.Focus();
         }
@@ -119,7 +119,7 @@ namespace WhatsLink_Alpha
         private async void btnMsg2_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem2);
-            await Task.Delay(500);
+            await Task.Delay(1000);
             this.FindForm().Activate();
             txtTelefone.Focus();
         }
@@ -127,7 +127,7 @@ namespace WhatsLink_Alpha
         private async void btnMsg3_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem3);
-            await Task.Delay(500);
+            await Task.Delay(1000);
             this.FindForm().Activate();
             txtTelefone.Focus();
         }
@@ -135,7 +135,7 @@ namespace WhatsLink_Alpha
         private async void btnMsg4_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem4);
-            await Task.Delay(500);
+            await Task.Delay(1000);
             this.FindForm().Activate();
             txtTelefone.Focus();
         }
