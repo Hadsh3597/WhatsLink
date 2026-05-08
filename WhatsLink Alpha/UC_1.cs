@@ -108,26 +108,36 @@ namespace WhatsLink_Alpha
             txtTelefone.Focus();
         }
 
-        private void btnMsg1_Click(object sender, EventArgs e)
+        private async void btnMsg1_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem1);
+            await Task.Delay(500);
+            this.FindForm().Activate();
+            txtTelefone.Focus();
         }
 
-        private void btnMsg2_Click(object sender, EventArgs e)
+        private async void btnMsg2_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem2);
+            await Task.Delay(500);
+            this.FindForm().Activate();
+            txtTelefone.Focus();
         }
 
-        private void btnMsg3_Click(object sender, EventArgs e)
+        private async void btnMsg3_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem3);
+            await Task.Delay(500);
+            this.FindForm().Activate();
+            txtTelefone.Focus();
         }
 
-        private void btnMsg4_Click(object sender, EventArgs e)
+        private async void btnMsg4_Click(object sender, EventArgs e)
         {
             AbrirNoAppComMensagem(Properties.Settings.Default.Mensagem4);
-
-
+            await Task.Delay(500);
+            this.FindForm().Activate();
+            txtTelefone.Focus();
         }
 
         private void FocarCampo()
