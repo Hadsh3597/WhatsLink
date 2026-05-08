@@ -245,6 +245,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Whatopen";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Whatopen";
             Activated += Form1_Activated;
             Deactivate += Form1_Deactivate;

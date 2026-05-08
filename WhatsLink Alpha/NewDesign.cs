@@ -51,7 +51,8 @@ namespace WhatsLink_Alpha
         {
             panel2.Controls.Clear();
             panel2.Controls.Add(new UC_Config() { Dock = DockStyle.Fill });
-            this.Size = new Size(709, 974);
+            this.Size = new Size(709, 600);
+            this.CentralizarNoMonitor();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -59,6 +60,14 @@ namespace WhatsLink_Alpha
             panel2.Controls.Clear();
             panel2.Controls.Add(new UC_home() { Dock = DockStyle.Fill });
             this.Size = new Size(449, 318);
+        }
+
+        public void CentralizarNoMonitor()
+        {
+            this.Location = new Point(
+                (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
+            );
         }
 
 
